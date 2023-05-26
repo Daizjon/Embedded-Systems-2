@@ -7,22 +7,20 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-
-int main ()
+int main()
 {
-	DDRB = 1<<7; //portb as an output led
-	PORTD = 1<<2; //pull-up activated
-	EICRA = 0x2; //make INT0 falling edge triggered
-	
-	EIMSK = (1<<INT0); //enable external interrupt 0 insert in pin pd0 for mega 2560
-	sei (); //enable interrupts
-	while (1); //wait here
+	DDRB |= (1<<7); //turn portb into output
+	OCR1A = 46872;//3 seconds as(3*16*10^6)/1024
+	TCCR1A = 0x00; //CTC mode, internal clk, prescaler=1024
+	TCCR1B = 0x0D;
+	TIMSK1 = (1<<OCIE1A); //enable Timer1 compare match A int.
+	sei (); //enable interrupt.
+	while(1){}
 }
-ISR (INT0_vect) //ISR for external interrupt 0
+ISR (TIMER1_COMPA_vect) //ISR for Timer1 compare match A
 {
-	int x = 20; //logic to blink 10 times means toggle 20 times for on and off states.
-		while(x!=0){
-		PORTB ^= (1<<7); //toggle PORTB led
-		x--;
-	}
+/* Toggle led */
+	PORTB ^= (1 << 7);
+/* Clear counter to restart counting */
+//TCNT1 = 0;
 }
