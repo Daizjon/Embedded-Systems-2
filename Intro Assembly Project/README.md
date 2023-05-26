@@ -22,3 +22,5 @@ using the PUSH instruction,
 c) POP each stack locations into registers R20 – R24.
 d) Use the simulator to single-step and examine the registers, the stack, and the stack
 pointer.
+
+### Note: originally all of these files are named main but in order to help distinguish between them on here I have renamed them.
