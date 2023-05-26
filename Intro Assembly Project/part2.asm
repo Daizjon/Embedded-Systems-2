@@ -1,0 +1,25 @@
+;
+; Lab1Activity2.asm
+;
+; Created: 9/9/2022 3:41:31 PM
+; Author : dc559
+;
+
+
+;.include "./m1280def.inc"
+
+LDI R20, HIGH(RAMEND)
+OUT SPH, R20
+LDI R20,LOW(RAMEND)
+OUT SPL, R20
+LDI R20, 0x10
+LDI R21, 0x20
+LDI R22, 0x30
+LDI R23, 0x40
+LDI R24, 0x50
+PUSH R20
+PUSH R21
+PUSH R22
+PUSH R23
+PUSH R25
+L1: RJMP L1
