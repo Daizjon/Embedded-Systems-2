@@ -21,8 +21,5 @@ ISR (TIMER1_COMPA_vect) //ISR for Timer1 compare match A
 {
 /* Toggle led */
 	PORTB ^= (1 << 7);
-/* Clear counter to restart counting */
-//TCNT1 = 0;
 }
-	}
-}
+
