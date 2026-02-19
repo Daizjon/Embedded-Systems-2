@@ -1,8 +1,5 @@
 /*
- * Lab3Activity1.c
- *
- * Created: 10/15/2022 9:51:24 AM
- * Author : dc559
+ * Author : Dai'zjon Carney
  */ 
 
 #include <avr/io.h>
@@ -24,3 +21,4 @@ ISR (INT0_vect) //ISR for external interrupt 0
 	x--;
 	}
 }
+
