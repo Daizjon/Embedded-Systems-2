@@ -1,9 +1,4 @@
-;
-; Lab1Activity2.asm
-;
-; Created: 9/9/2022 3:41:31 PM
-; Author : dc559
-;
+; Author : Dai'zjon Carney
 
 
 ;.include "./m1280def.inc"
@@ -22,4 +17,5 @@ PUSH R21
 PUSH R22
 PUSH R23
 PUSH R25
+
 L1: RJMP L1
