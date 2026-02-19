@@ -1,9 +1,4 @@
-;
-; Lab2Activity5.asm
-;
-; Created: 9/25/2022 11:17:31 AM
-; Author : dc559
-;
+; Author : Dai'zjon Carney
 
 
 .org 00
@@ -24,4 +19,5 @@ NOP ;No operation wastes clock cycle
 NOP
 DEC R20
 BRNE AGAIN ;Repeat until R20 becomes 0
+
 RET
