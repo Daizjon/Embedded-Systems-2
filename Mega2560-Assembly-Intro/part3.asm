@@ -1,9 +1,4 @@
-;
-; Lab1Activity3.asm
-;
-; Created: 9/9/2022 5:33:15 PM
-; Author : dc559
-;
+; Author : Dai'zjon Carney
 
 
 LDI R20, HIGH($29D)
@@ -27,4 +22,5 @@ POP R21 ;pops value from stack $298 into register
 POP R22 ;pops value from stack $298 into register
 POP R23 ;pops value from stack $298 into register
 POP R24 ;pops value from stack $298 into register
+
 L1: RJMP L1
