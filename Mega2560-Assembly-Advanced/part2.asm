@@ -1,9 +1,4 @@
-;
-; Lab2Activity3.asm
-;
-; Created: 9/25/2022 12:42:03 AM
-; Author : dc559
-;
+; Author : Dai'zjon Carney
 ;Using lookup tables for faster computation as x is only 0-9
     .org 00
     LDI R20, 0 ; R20 represent x = 0
