@@ -1,9 +1,4 @@
-;
-; Lab2Activity1.asm
-;
-; Created: 9/24/2022 10:02:18 PM
-; Author : dc559
-;
+; Author : Daizjon Carney
 
 .org 00
  LDI   R16,0xFF ;R16 = 0b11111111
@@ -23,4 +18,5 @@ NOP ;No operation wastes clock cycle
 NOP
 DEC R20
 BRNE AGAIN ;Repeat until R20 becomes 0
+
 RET
