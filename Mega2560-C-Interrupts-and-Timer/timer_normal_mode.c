@@ -1,8 +1,5 @@
 /*
- * Lab3Activity1.c
- *
- * Created: 10/15/2022 9:51:24 AM
- * Author : dc559
+ * Author : Dai'zjon Carney
  */ 
 
 #include <avr/io.h>
@@ -22,4 +19,5 @@ ISR (TIMER1_COMPA_vect) //ISR for Timer1 compare match A
 /* Toggle led */
 	PORTB ^= (1 << 7);
 }
+
 
