@@ -1,24 +1,54 @@
-A more complex assembly project.
+# Mega2560-Assembly-Advanced
 
-Goal: ultimately to use assembly to blink led on the mega 2560 board.
+Advanced AVR assembly programming project targeting the ATmega2560 (Arduino Mega 2560).
 
-4 Parts:
+## Overview
 
-Part 1) Write and assemble a program to toggle all the bits of PORTB continuously by sending $55 and
-$AA to these ports. Put a time delay between the "on" and "off" states. Then using the simulator,
-single-step through the program and examine the ports.
+This project builds on foundational AVR assembly concepts and applies them to more complex register, memory, and hardware interactions on the ATmega2560 microcontroller.
 
-Part 2) Write a program to calculate y where y = x^2 + 3x + 9. x is between 0 and 9 and the look-up
-table for y is located at the address (program memory) of $200. Register R20 has the x, and at
-the end of the program R21 should have y. Use the simulator to change the x value and single-
-step through the program, examining the registers as you go.
+All programs were developed using Atmel Studio and tested using the AVR simulator and physical hardware.
 
-Part 3) Connect the board together. Specifically, you may find the PIN connections of this
-ATMEGA2560 board here:
-https://www.arduino.cc/en/Hacking/PinMapping2560
-Revise your code from part 1 to blink the LED of your microcontroller. You can choose a
-delay according to your needs. Your code should run in Atmel Studio and written in assembly.
+## Objectives
 
+- Practice direct register manipulation in assembly
+- Perform arithmetic operations using lookup tables
+- Control hardware ports on the ATmega2560
+- Deploy assembly programs onto real hardware
 
+## Project Breakdown
 
-### Note: originally all of these files are named main but in order to help distinguish between them on here I have renamed them.
+### Part 1 – PORTB Toggle
+
+- Continuously toggles all bits of PORTB
+- Alternates between 0x55 and 0xAA
+- Includes a software delay between states
+- Verified using AVR simulator and hardware testing
+
+### Part 2 – Lookup Table Computation
+
+- Computes: y = x² + 3x + 9
+- x ranges from 0 to 9
+- Lookup table stored in program memory (starting at 0x200)
+- Final result stored in R21
+- Register values verified step-by-step in simulator
+
+### Part 3 – Hardware LED Control
+
+- Uses assembly to blink the onboard LED
+- Direct register access (no Arduino libraries)
+- Executed on ATmega2560 hardware
+- Delay configurable within assembly logic
+
+## Files
+
+- `part1.asm` – PORTB toggle implementation
+- `part2.asm` – Lookup table math computation
+- `part3.asm` – LED hardware control
+
+Note: Original lab files were named `main.asm`. They were renamed here for clarity and organization.
+
+## Hardware
+
+- Arduino Mega 2560 (ATmega2560)
+- Atmel Studio
+- AVR Simulator
