@@ -1,26 +1,39 @@
-Goal: 
-To examine and use an AVR assembler.
-To examine and use an AVR simulator.
-To examine and use the stack.
+# Mega2560 AVR Assembly – Stack & Register Operations
 
-The assembler used for this project was Atmel Studio however you can use any assembler of your choice such as linux
+## Overview
+This project introduces AVR assembly programming on the ATmega2560.  
+The goal is to explore register manipulation, stack operations, and use of the AVR simulator.
 
-Parts:
+Development was performed in Atmel Studio, but the assembly code can be built with any AVR-compatible assembler.
 
-Part1: Write and assemble a program to load register R20 with value 0x99. Then from register
-R20 moves it to R0, R12, and R31. Use the simulator to single-step the program and examine the
-registers.
 
-Part2: Write and assemble a program to load values into each of registers R20 – R24 and then
-push each of these registers onto the stack. Single-step the program, and examine the stack and
-the SP register after the execution of each instruction.
+## Project Breakdown
 
-Part3: Write and assemble a program to:
-a) Set SP = $29D,
-b) Put a different value in each of RAM locations $29D, $29C, $29B, $29A, $299, and $298
-using the PUSH instruction,
-c) POP each stack locations into registers R20 – R24.
-d) Use the simulator to single-step and examine the registers, the stack, and the stack
-pointer.
+### Part 1 – Register Transfer
+- Load register R20 with value `0x99`
+- Move the value into registers R0, R12, and R31
+- Single-step in simulator to observe register changes
 
-### Note: originally all of these files are named main but in order to help distinguish between them on here I have renamed them.
+### Part 2 – Stack Push Operations
+- Load values into registers R20–R24
+- Push each register onto the stack
+- Single-step and observe:
+  - Stack memory contents
+  - Stack Pointer (SP) behavior
+
+### Part 3 – Stack Pointer & Memory Control
+- Manually set Stack Pointer (SP) to `$29D`
+- Store values in RAM locations `$29D`–`$298`
+- Use `PUSH` and `POP` instructions
+- Observe stack behavior and register restoration in simulator
+
+
+## Key Concepts Demonstrated
+- AVR register architecture
+- Stack growth direction
+- PUSH / POP mechanics
+- Manual stack pointer control
+- Low-level memory inspection using simulator
+
+
+*Note: Files were originally named `main.asm` but were renamed for clarity within this repository.*
